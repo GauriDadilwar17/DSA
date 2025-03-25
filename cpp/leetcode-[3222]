@@ -1,0 +1,31 @@
+class Solution {
+public:
+    string winningPlayer(int x, int y) {
+        bool flag = true;
+        int alice = 0;
+        int bob = 0;
+        while(x >= 0 || y >= 0){
+            if(flag){
+                if(x>= 1 && y >= 4){
+                    alice = 0;
+                    x--;
+                    y-=4;
+                }else{
+                    return "Bob";
+                }
+                flag = !flag;
+            }
+        else{
+             if(x>= 1 && y >= 4){
+                    bob = 0;
+                    x--;
+                    y-=4;
+                }else{
+                    return "Alice";
+                }
+                flag = !flag;
+            }
+        }
+        return "";
+    }
+};
