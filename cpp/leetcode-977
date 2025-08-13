@@ -1,0 +1,15 @@
+//squares of a sorted array
+
+class Solution {
+public:
+    vector<int> sortedSquares(vector<int>& nums) {
+        vector<int>result;
+        int res;
+        for(int i=0; i<nums.size(); i++){
+            res= nums[i]* nums[i];
+            result.push_back(res);
+        }
+        sort(result.begin(), result.end());
+        return result;
+    }
+};
